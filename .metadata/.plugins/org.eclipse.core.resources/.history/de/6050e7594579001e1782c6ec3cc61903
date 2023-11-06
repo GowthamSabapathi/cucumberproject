@@ -1,0 +1,54 @@
+package com.app.getapi;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class PostMethodExample {
+	public static void postMethod(){
+		try {
+			URL url = new URL("https://dummy.restapiexample.com/api/v1/create");
+			HttpURLConnection connection=(HttpURLConnection)url.openConnection();	
+			connection.setRequestMethod("POST");
+			connection.setRequestProperty("Content-Type", "application/json");
+			connection.setDoOutput(true);
+			String jsonBody = "{\"employee_name\": \"gowtham wilspat\",\"employee_salary\":\" 95600\",\"employee_age\": \"26\"}";
+			byte[] inputJson = jsonBody.getBytes();
+			OutputStream os = connection.getOutputStream();
+			os.write(inputJson);
+			System.out.println(connection.getResponseCode());
+			System.out.println(connection.getResponseMessage());
+			InputStream is = connection.getInputStream();
+			InputStreamReader isr = new InputStreamReader(is);
+			BufferedReader br=new BufferedReader(isr);
+            String line;
+            StringBuffer buffer=new StringBuffer();
+            while((line=br.readLine())!=null) {
+            	buffer.append(line);
+            }
+            System.out.println(buffer);
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+	public static void name(String[] args) {
+
+		postMethod();
+	}
+}
+
+
+
+

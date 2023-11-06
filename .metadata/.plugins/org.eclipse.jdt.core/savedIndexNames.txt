@@ -1,0 +1,23 @@
+INDEX VERSION 1.131+C:\Users\eximt\Downloads\eclipse-jee-2022-12-R-win32-x86_64\eclipse\API\.metadata\.plugins\org.eclipse.jdt.core
+3258878439.index
+1865797976.index
+2855720420.index
+798109087.index
+3802859595.index
+3859759208.index
+168794919.index
+3890644473.index
+170974135.index
+2165812264.index
+3308678019.index
+5725160.index
+2127212698.index
+149887738.index
+2918569339.index
+2543093329.index
+790182585.index
+4272855229.index
+1643289517.index
+226392196.index
+2314083704.index
+3255220150.index

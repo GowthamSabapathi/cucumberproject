@@ -1,0 +1,28 @@
+package com.app.getapi;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class GetApiExample {
+
+	public static void getMethod() {
+		try {
+			URL url=new URL("https://dummy.restapiexample.com/");
+			HttpURLConnection Connection=(HttpURLConnection)url.openConnection();
+			Connection.setRequestMethod("GET");
+			Connection.connect();
+			int statusCode = Connection.getResponseCode();
+			System.out.println(statusCode);
+		     String message = Connection.getResponseMessage();
+		     System.out.println(message);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
+
+public static void main(String[]args) {
+	 getMethod();
+}}
